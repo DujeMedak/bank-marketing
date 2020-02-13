@@ -12,7 +12,7 @@ class DataLoader:
         self.base_path = data['base_path']
 
     def load_csv_data(self, filename="bank.csv", load_first_n=None):
-        data_folder = os.path.join(self.base_path, "data", "bank")
+        data_folder = os.path.join(self.base_path, "data")
         input_csv_path = os.path.join(data_folder, filename)
         if not os.path.exists(input_csv_path):
             print("there is no file with this path:", input_csv_path)
@@ -23,7 +23,5 @@ class DataLoader:
         target_column = names[-1]
         input_names = names[:-1]
         X = data.loc[:, input_names]
-        print(X)
         y = data.loc[:, target_column]
-        print(y)
         return X, y
