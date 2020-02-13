@@ -9,7 +9,7 @@ def main():
     dl = DataLoader("../config.json")
     inputs, labels = dl.load_csv_data(load_first_n=10)
     inputs.head()
-    LR = LogisticRegression(random_state=0, solver='lbfgs', multi_class='ovr').fit(inputs, labels)
+    #LR = LogisticRegression(random_state=0, solver='lbfgs', multi_class='ovr').fit(inputs, labels)
 
 if __name__ == "__main__":
     main()
